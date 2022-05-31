@@ -1,0 +1,10 @@
+./img/unknown/steve.jpg,Steve Jobs,0.4430566044250505
+./img/unknown/elon.jpg,Elon Musk,0.3736383873997814
+./img/unknown/keanu.jpg,unknown_person,None
+./img/unknown/keanu_elon.jpg,unknown_person,None
+./img/unknown/keanu_elon.jpg,Elon Musk,0.388026310262499
+./img/unknown/steve_elon.jpg,Steve Jobs,0.44501724900998635
+./img/unknown/steve_elon.jpg,Elon Musk,0.388026310262499
+./img/unknown/bill_looklike.PNG,unknown_person,None
+./img/unknown/michael.jpg,unknown_person,None
+./img/unknown/bill.jpg,Bill Gates,0.4570663710550049
