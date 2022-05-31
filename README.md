@@ -7,7 +7,8 @@ la biblioteca de reconocimiento facial más simple del mundo.
 Para instalar la dependencia face_recognition es necesario tener instalado CMake
 En ubuntu:
 ```bash
-sudo apt install cmake
+sudo apt install -y build-essential
+sudo apt install -y cmake
 ```
 ### Crear un entorno virtual con Miniconda
 Creamos un entorno nuevo con python 3.8
