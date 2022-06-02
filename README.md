@@ -48,7 +48,7 @@ Ejemplo del resultado faces:
 ### Identificar los rostros en una imagen (api)
 Levantar el api con uvicorn
 ```bash
-uvicorn main:app --reload
+uvicorn app.main:app --reload
 ```
 Acceder al swagger para probar
 ```bash
@@ -59,16 +59,16 @@ http://127.0.0.1:8000/docs#/
 sudo docker-compose build
 sudo docker-compose up -d
 ```
-If you want to create a soft link of img_known volume
+If you want to create a soft link of img_known volume on working dir
 ```bash
 sudo docker inspect face-recognition | grep img_known | grep Source
 sudo ln -s /dockers_servicios/volumes/face_recognition_img_known/_data ./img_known
 ```
-Important all requests must include user_id in the path request, and must exists a dir with that name under img_known volume, with the known faces images properly named with the person name and surname. like: "Alvaro Hernandez.jpg"
-Example:
+Important all requests must include {user_id} in the path request, and must exists a dir with {user_id} name under img_known volume, with the known faces images properly named with the person name and surname. like: "img_known/-N0MJI_cWfK3EVTybR59/Alvaro Hernandez.jpg"
+Example of curl request:
 ```bash
 curl -X 'POST' \
-  'http://127.0.0.1:8000/face/identify/1a' \
+  'http://127.0.0.1:8000/face/identify/-N0MJI_cWfK3EVTybR59' \
   -H 'accept: application/json' \
   -H 'Content-Type: multipart/form-data' \
   -F 'file=@000001.jpg;type=image/jpeg'
