@@ -11,6 +11,7 @@
 #     main()
 
 from fastapi import FastAPI, UploadFile
+from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image
 from io import BytesIO
 import numpy as np

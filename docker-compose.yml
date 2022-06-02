@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  face-recognition:
+    image: face-recognition
+    container_name: face-recognition
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - TZ=Europe/Madrid
+    restart: unless-stopped
+    ports:
+      - 8000:8000
+    volumes:
+      - img_known:/app/img/known
+    logging:
+        driver: "json-file"
+        options:
+            max-file: "5"
+            max-size: "10m"
+volumes:
+  img_known:
