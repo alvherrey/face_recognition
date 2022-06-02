@@ -35,9 +35,9 @@ pip install -r requirements.txt
 ```
 ## Ejecucion
 ### Identificar los rostros en una imagen (test)
-Necesitamos la estructura de "img/known/*.jpg" con las imagenes conocidas (etiquetadas por su nombre)
-_Necesitamos la estructura de "out/" donde se guarda la imagen resultante
-_Obtenemos los resultados en el diccionario faces imprimido al final
+Necesitamos la estructura de "img/known/*.jpg" con las imagenes conocidas (etiquetadas por su nombre)__
+Necesitamos la estructura de "out/" donde se guarda la imagen resultante__
+Obtenemos los resultados en el diccionario faces imprimido al final
 ```bash
 python test_api.py
 ```
@@ -64,8 +64,8 @@ If you want to create a soft link of img_known volume on working dir
 sudo docker inspect face-recognition | grep img_known | grep Source
 sudo ln -s /dockers_servicios/volumes/face_recognition_img_known/_data ./img_known
 ```
-Important all requests must include {user_id} in the path request, and must exists a dir with {user_id} name under img_known volume, with the known faces images properly named with the person name and surname. _Like: "img_known/-N0MJI_cWfK3EVTybR59/Alvaro Hernandez.jpg"
-_Example of curl request:
+Important all requests must include {user_id} in the path request, and must exists a dir with {user_id} name under img_known volume, with the known faces images properly named with the person name and surname.__ Like: "img_known/-N0MJI_cWfK3EVTybR59/Alvaro Hernandez.jpg"__
+Example of curl request:
 ```bash
 curl -X 'POST' \
   'http://127.0.0.1:8000/face/identify/-N0MJI_cWfK3EVTybR59' \
