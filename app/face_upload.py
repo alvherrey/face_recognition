@@ -4,6 +4,7 @@ import random
 
 def face_upload(user_id, img, name):
 
+    nginx_server = os.getenv('NGINX_SERVER')
     directory = 'img/known/' + user_id
     f = os.path.join(directory, name)
 
@@ -21,7 +22,7 @@ def face_upload(user_id, img, name):
             "uploaded" : True,
             "user_id": user_id,
             "name": name,
-            "path" : f + '.jpg',
+            "path" : nginx_server + user_id + '/' + name + '.jpg',
         }
     else:
         upload = {

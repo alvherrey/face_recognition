@@ -8,6 +8,7 @@ services:
       dockerfile: Dockerfile
     environment:
       - TZ=Europe/Madrid
+      - NGINX_SERVER=http://192.168.9.12:8001/
     restart: unless-stopped
     ports:
       - 8000:8000
